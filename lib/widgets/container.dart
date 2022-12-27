@@ -29,11 +29,15 @@ class MyWidget extends StatelessWidget {
       ),
 
       body: Center(
+          // Container widget 
           child: Container(
-        height: 300,
-        width: double.infinity,
-        margin: EdgeInsets.all(20),
+            // Some properties like height,width are used  below
+        height: 300, // Height of the container
+        width: double.infinity, // Width of the container
+        margin: EdgeInsets.all(20), /// Margin of the container to seperate the 
+        // container from the scaffold
         alignment: Alignment.center,
+        // decoration property is used to style the container
         decoration: BoxDecoration(
             color: Colors.greenAccent,
             border: Border.all(color: Colors.green, width: 8),
@@ -42,6 +46,8 @@ class MyWidget extends StatelessWidget {
               BoxShadow(
                   color: Colors.black, offset: Offset(5, 5), blurRadius: 10)
             ]),
+// The container class contains a child in which the text which is to be displayed is
+// entered
         child: Text(
           'Welcome',
           style: TextStyle(fontSize: 50),
