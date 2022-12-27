@@ -1,6 +1,6 @@
 # yfsampleproject
 
-A new Flutter project.
+This is my first flutter mobile application.
 
 ## Getting Started
 
