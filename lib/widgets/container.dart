@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:yfsampleproject/widgets/gridviews.dart';
 
 class MyWidget extends StatelessWidget {
   const MyWidget({super.key});
+
+  void userSettingsPage(BuildContext ctx) {
+   Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
+      return const MySecondWidget();
+    }));} 
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +20,9 @@ class MyWidget extends StatelessWidget {
         backgroundColor: Colors.green[600],
         //Leading - left-side of the appbar, leading is property
         leading:
-            IconButton(onPressed: () {}, icon: Icon(Icons.manage_accounts)),
+            IconButton(onPressed: () {
+              userSettingsPage(context);
+            }, icon: Icon(Icons.manage_accounts)),
         // Actions - right-side of the appbar, action is a property
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
@@ -50,7 +58,10 @@ class MyWidget extends StatelessWidget {
 // entered
         child: Text(
           'Welcome',
-          style: TextStyle(fontSize: 50),
+          style: TextStyle(fontSize: 50,
+          fontWeight: FontWeight.bold,
+          fontStyle: FontStyle.italic,
+          letterSpacing: 5,),
         ),
       )),
     );
